@@ -3,11 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
-  namespace :admin do
-    resources :products, :stores
-    get '/', to: 'product#index'
-  end
-
   resources :products, :stores
 
 end
