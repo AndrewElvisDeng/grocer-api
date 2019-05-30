@@ -1,0 +1,10 @@
+<%= form_with(model: store, local: true) do |form| %>
+	
+	<%= form.label :address, 'Store Address:'%>
+	<%= form.text_field :address %>
+  <br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
