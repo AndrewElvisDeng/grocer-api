@@ -1,3 +1,4 @@
 class Store < ApplicationRecord
-    validates :address, presence: true
+    validates :address, :street, :zip, :phone, presence: true
+    
 end

@@ -47,7 +47,7 @@ class StoresController < ApplicationController
     end
 
     def store_params
-        params.fetch(:store, {}).permit(:address)
+        params.fetch(:store, {}).permit(:address, :street, :zip, :phone)
     end
 
 end

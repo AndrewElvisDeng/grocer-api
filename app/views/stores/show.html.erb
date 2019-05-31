@@ -1,3 +1,4 @@
-<h1><%=@store.address%></h1>
+<h1><%=@store.address%> <%=@store.street%> <%=@store.zip%></h1>
+<h2><%=@store.phone%></h1>
 <%= link_to 'Back', stores_path%>
 <%= link_to 'Edit', edit_store_path(@store) %>  

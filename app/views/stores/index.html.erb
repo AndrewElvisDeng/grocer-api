@@ -9,10 +9,15 @@
 <tbody>
 		<% @stores.each do |store| %>
 			<tr>
-				<td><%= link_to store.address, store_path(store)%></td>
+				<td>
+				<%= link_to store_path(store) do %>
+					<%= store.address %> <%= store.street %> <%= store.zip %>
+				<% end %>
+				</td>
+				<td><%= store.phone %></td>
 				<td><%= link_to 'Edit', edit_store_path(store) %></td>
 			</tr>
-		<%end%>
+		<% end %>
 	</tbody>
 </table>
 

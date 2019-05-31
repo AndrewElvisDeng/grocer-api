@@ -1,9 +1,18 @@
 <%= form_with(model: store, local: true) do |form| %>
 	
-	<%= form.label :address, 'Store Address:'%>
-	<%= form.text_field :address %>
+  <h3>Store Adress:</h3>
+	<%= form.label :address, 'Address:'%>
+	<%= form.number_field :address %>
   <br>
-
+  <%= form.label :street, 'Street:'%>
+	<%= form.text_field :street %>
+  <br>
+  <%= form.label :zip, 'Zip Code:'%>
+	<%= form.number_field :zip %>
+  <br>
+  <%= form.label :phone, 'Phone Number:'%>
+	<%= form.number_field :phone %>
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>
