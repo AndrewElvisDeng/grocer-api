@@ -1,0 +1,9 @@
+<%= link_to 'Products and Produce', products_path %>
+<%= link_to 'Store Locations', stores_path %>
+<%= link_to 'Inventory', stocks_path %>
+
+<h1>Adding to Inventory</h1>
+
+<%= render 'form', stock: @stock %>
+
+<%= link_to 'Back', stores_path %>

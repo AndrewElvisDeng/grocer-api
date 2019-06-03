@@ -1,3 +1,7 @@
+<%= link_to 'Products and Produce', products_path %>
+<%= link_to 'Store Locations', stores_path %>
+<%= link_to 'Inventory', stocks_path %>
+
 <h1><%=@store.address%> <%=@store.street%> <%=@store.zip%></h1>
 <h2><%=@store.phone%></h2>
 
@@ -22,6 +26,5 @@
 	</tbody>
 </table>
 
-<%= link_to 'Add Item', new_stock_path %>
 <%= link_to 'Back', stores_path%>
 <%= link_to 'Edit', edit_store_path(@store) %>  

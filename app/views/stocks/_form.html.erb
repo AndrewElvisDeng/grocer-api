@@ -1,0 +1,20 @@
+<!--#%= form_with(model: stock, local: true) do |form| %-->
+<%= form_with scope: :stock, url: stocks_path, local: true do |form| %>
+
+    
+        <%= form.label :store_id, 'Location:' %>
+        <%= form.collection_select :store_id, Store.order(:zip), :id, :street, include_blank: true, prompt: 'Choose a location' %>
+    <br>
+        <%= form.label :product_id, 'Product:' %>
+        <%= form.collection_select :product_id, Product.order(:name), :id, :name, include_blank: true, prompt: 'Choose a product' %>
+    <br>
+        <%= form.label :quantity, 'Quantity: ' %>
+        <%= form.number_field :quantity%>
+
+
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>
+

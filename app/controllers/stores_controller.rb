@@ -23,7 +23,7 @@ class StoresController < ApplicationController
 
 
     def show 
-        @stocks = Stock.all
+        # @stocks = Stock.all
         set_store
     end
 

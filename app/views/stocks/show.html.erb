@@ -1,0 +1,10 @@
+<%= link_to 'Products and Produce', products_path %>
+<%= link_to 'Store Locations', stores_path %>
+<%= link_to 'Inventory', stocks_path %>
+
+
+<h1><%= @stock.product.name %></h1>
+<p><%= @stock.store.street %></p>
+<p><%= @stock.quantity %>
+<%= link_to 'Back', stocks_path%>
+<%= link_to 'Edit', edit_stock_path(@stock) %>
