@@ -23,6 +23,7 @@ class StoresController < ApplicationController
 
 
     def show 
+        @stocks = Stock.all
         set_store
     end
 
@@ -47,7 +48,7 @@ class StoresController < ApplicationController
     end
 
     def store_params
-        params.fetch(:store, {}).permit(:address, :street, :zip, :phone)
+        params.fetch(:store, {}).permit(:address, :street, :zip, :phone, :stocks, :stock_id)
     end
 
 end

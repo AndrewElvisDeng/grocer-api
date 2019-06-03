@@ -1,4 +1,4 @@
 class Stock < ApplicationRecord
-    has_one :product, class_name: "product", foreign_key: "product_id", optional: false
-    belongs_to :inventory, class_name: "inventory", foreign_key: "inventory_id", optional: false
+    belongs_to :product, class_name: "product", foreign_key: "product_id"
+    belongs_to :store, class_name: "store", foreign_key: "store_id"
 end
