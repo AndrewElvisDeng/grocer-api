@@ -1,6 +1,6 @@
 class Store < ApplicationRecord
     validates :address, :street, :zip, :phone, presence: true
-    has_many :stocks, class_name: "stock", foreign_key: "reference_id"
+    has_many :stocks
     
     # before_create :create_inventory
     

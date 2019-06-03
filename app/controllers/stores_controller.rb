@@ -24,7 +24,9 @@ class StoresController < ApplicationController
 
     def show 
         # @stocks = Stock.all
-        set_store
+        # set_store
+        @store = Store.find(params[:id])
+        @stocks = @store.stocks
     end
 
     def update

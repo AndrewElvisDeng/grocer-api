@@ -12,12 +12,12 @@
 		</tr>
 	</thead>
 
-<tbody>
+	<tbody>
 		<% @stocks.each do |stock| %>
 			<tr>
 				<td>
                     <%= link_to stock_path(stock) do %>
-                        <%= stock.product %> <%= stock.quantity %>
+                        <%= stock.product.name %> <%= stock.quantity %>
                     <% end %>
 				</td>
 				<td><%= link_to 'Change Quantity', edit_stock_path(stock) %></td>
