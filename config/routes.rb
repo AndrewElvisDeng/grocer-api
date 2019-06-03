@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
-  resources :products, :stores
+  get '/inventories' => 'inventories#index'
+
+  resources :products, :stores, :inventories, :stocks
 
 end
