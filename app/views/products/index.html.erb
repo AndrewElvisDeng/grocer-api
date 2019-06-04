@@ -3,7 +3,7 @@
 		<h1>Products and Produce</h1>
 	</div>
 
-	<div class="row justify-content-center">
+	<div class="row justify-content-center" style="padding:10x 25px 10px 25px">
 		<a class = "btn btn-success btn-sm mr-1" href="<%=new_product_path%>" role="button"> New Product </a>
 	</div>
 
@@ -18,9 +18,8 @@
 			<tbody>
 				<% @products.each do |product| %>
 					<tr>
-						<td><%= link_to product.name, product_path(product)%></td>
-						<td>$<%= product.price %></td>
-						<td><%= link_to 'Edit', edit_product_path(product) %></td>
+						<td style="padding:10px 25px 10px 25px"><%= link_to product.name, product_path(product)%></td>
+						<td style="text-align: right"><%= number_to_currency(product.price) %></td>
 					</tr>
 				<%end%>
 			</tbody>

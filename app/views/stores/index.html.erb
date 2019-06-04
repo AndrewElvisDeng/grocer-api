@@ -18,13 +18,12 @@
 			<tbody>
 				<% @stores.each do |store| %>
 					<tr>
-						<td>
+						<td style="padding:10px 25px 10px 25px">
 						<%= link_to store_path(store) do %>
 							<%= store.address %> <%= store.street %> <%= store.zip %>
 						<% end %>
 						</td>
-						<td><%= store.phone %></td>
-						<td><%= link_to 'Edit', edit_store_path(store) %></td>
+						<td style="padding:10px 25px 10px 25px; text-align: right"><%= store.phone %></td>
 					</tr>
 				<% end %>
 			</tbody>

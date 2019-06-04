@@ -2,10 +2,7 @@ class Store < ApplicationRecord
     validates :address, :street, :zip, :phone, presence: true
     has_many :stocks
     
-    # before_create :create_inventory
-    
-    # private
-    # def create_inventory
-    #     inventories.build(:store => @store)
-    # end
+    def street=(s)
+        write_attribute(:street, s.to_s.titleize)
+    end
 end

@@ -19,10 +19,9 @@
 			<tbody>
 				<% @stocks.each do |stock| %>
 					<tr>
-						<td><%= link_to stock.store.street, stock_path(stock)%></td>
-						<td><%= stock.product.name %></td>
-						<td><%= stock.quantity %></td>
-						<td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+						<td style="padding:10px 25px 10px 25px"><%= link_to stock.store.street, stock_path(stock)%></td>
+						<td style="text-align: center"><%= stock.product.name %></td>
+						<td style="text-align: right"><%= stock.quantity %></td>
 					</tr>
 				<%end%>
 			</tbody>

@@ -1,6 +1,6 @@
 <div class="container">
     <h1><%=@product.name%></h1>
-    <p>$<%=@product.price%></p>
+    <p><%=number_to_currency(@product.price)%></p>
 
     <a class = "btn btn-secondary btn-sm mr-1" href="<%=products_path%>" role="button"> Back </a>
     <a class = "btn btn-info btn-sm mr-1" href="<%=edit_product_path%>" role="button"> Edit </a>
