@@ -2,29 +2,32 @@
 <%= link_to 'Store Locations', stores_path %>
 <%= link_to 'Inventory', stocks_path %>
 
-<h1><%=@store.address%> <%=@store.street%> <%=@store.zip%></h1>
-<h2><%=@store.phone%></h2>
+<div class="container">
+	<h1><%=@store.address%> <%=@store.street%> <%=@store.zip%></h1>
+	<h2><%=@store.phone%></h2>
 
-<table>
-	<thead>
-		<tr>
-			<th colspan="3"></th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<% @stocks.each do |stock| %>
+	<table>
+		<thead>
 			<tr>
-				<td>
-                    <%= link_to stock_path(stock) do %>
-                        <%= stock.product.name %> <%= stock.quantity %>
-                    <% end %>
-				</td>
-				<td><%= link_to 'Change Quantity', edit_stock_path(stock) %></td>
+				<th colspan="3"></th>
 			</tr>
-		<% end %>
-	</tbody>
-</table>
+		</thead>
 
-<%= link_to 'Back', stores_path%>
-<%= link_to 'Edit', edit_store_path(@store) %>  
+		<tbody>
+			<% @stocks.each do |stock| %>
+				<tr>
+					<td>
+						<%= link_to stock_path(stock) do %>
+							<%= stock.product.name %> <%= stock.quantity %>
+						<% end %>
+					</td>
+					<td><%= link_to 'Change Quantity', edit_stock_path(stock) %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+
+    <a class = "btn btn-secondary btn-sm mr-1" href="<%=stores_path%>" role="button"> Back </a>
+    <a class = "btn btn-info btn-sm mr-1" href="<%=edit_store_path%>" role="button"> Edit </a>
+</div>

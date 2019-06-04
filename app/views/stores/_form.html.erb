@@ -1,19 +1,30 @@
 <%= form_with(model: store, local: true) do |form| %>
 	
-  <h3>Store Adress:</h3>
-	<%= form.label :address, 'Address:'%>
-	<%= form.number_field :address %>
-  <br>
-  <%= form.label :street, 'Street:'%>
-	<%= form.text_field :street %>
-  <br>
-  <%= form.label :zip, 'Zip Code:'%>
-	<%= form.number_field :zip %>
-  <br>
-  <%= form.label :phone, 'Phone Number:'%>
-	<%= form.number_field :phone %>
-  <br>
-  <div class="actions">
-    <%= form.submit %>
+  <p>Store Address:</p>
+
+  <div class="form-group">
+	  <%= form.label :address, 'Address:'%>
+	  <%= form.number_field :address, class: "form-control", placeholder: 'Address number' %>
   </div>
+
+  <div class="form-group">
+    <%= form.label :street, 'Street:'%>
+	  <%= form.text_field :street, class: "form-control", placeholder: 'Address street'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :zip, 'Zip Code:'%>
+	  <%= form.number_field :zip, class: "form-control", placeholder: 'Please enter ZIP Code' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone, 'Phone Number:'%>
+	  <%= form.number_field :phone, class: "form-control", placeholder: '(***) ***-****'%>
+  </div>
+
+  <div class="form-group">
+    <a class = "btn btn-secondary btn-sm mr-1" href="<%=stores_path%>" role="button"> Back </a>
+    <button type="submit" class="btn btn-primary btn-sm"> Submit </button>
+  </div>
+  
 <% end %>

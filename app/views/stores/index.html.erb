@@ -2,31 +2,30 @@
 <%= link_to 'Store Locations', stores_path %>
 <%= link_to 'Inventory', stocks_path %>
 
-<h1>Store Locations: </h1>
-<table>
-	<thead>
-		<tr>
-			<th colspan="3"></th>
-		</tr>
-	</thead>
+<div class="container">
+	<h1>Store Locations: </h1>
 
-<tbody>
-		<% @stores.each do |store| %>
+	<a class = "btn btn-success btn-sm mr-1" href="<%=new_store_path%>" role="button"> New Store Location </a>
+
+	<table>
+		<thead>
 			<tr>
-				<td>
-				<%= link_to store_path(store) do %>
-					<%= store.address %> <%= store.street %> <%= store.zip %>
-				<% end %>
-				</td>
-				<td><%= store.phone %></td>
-				<td><%= link_to 'Edit', edit_store_path(store) %></td>
+				<th colspan="3"></th>
 			</tr>
-		<% end %>
-	</tbody>
-</table>
+		</thead>
 
-<br>
-
-<%= link_to 'New Store', new_store_path %>
-<%= link_to 'Products', products_path %>
-
+	<tbody>
+			<% @stores.each do |store| %>
+				<tr>
+					<td>
+					<%= link_to store_path(store) do %>
+						<%= store.address %> <%= store.street %> <%= store.zip %>
+					<% end %>
+					</td>
+					<td><%= store.phone %></td>
+					<td><%= link_to 'Edit', edit_store_path(store) %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

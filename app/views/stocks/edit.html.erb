@@ -2,8 +2,11 @@
 <%= link_to 'Store Locations', stores_path %>
 <%= link_to 'Inventory', stocks_path %>
 
-<h1>Updating Inventory</h1>
 
-<%= render 'form', stock: @stock %>
+<div class="container">
+    <h1>Updating Inventory</h1>
 
-<%= link_to 'Back', stocks_path %>
+    <%= render 'form', stock: @stock %>
+
+    <%= link_to 'Back', stocks_path %>
+</div>

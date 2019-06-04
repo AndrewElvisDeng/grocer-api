@@ -2,8 +2,8 @@
 <%= link_to 'Store Locations', stores_path %>
 <%= link_to 'Inventory', stocks_path %>
 
-<h1>New Store Location  </h1>
+<div class="container">
+    <h1>New Store Location  </h1>
 
-<%= render 'form', store: @store %>
-
-<%= link_to 'Back', stores_path %>
+    <%= render 'form', store: @store %>
+</div>

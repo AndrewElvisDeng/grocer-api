@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+ .products_index{
+     h1 {
+        color: green;
+        font-size: 200%;
+        font-family: fantasy;
+     }
+     table {
+        border-collapse: separate;
+        border-spacing: 50px 0;
+      }
+      
+      td {
+        padding: 10px 0;
+      }
+ }
